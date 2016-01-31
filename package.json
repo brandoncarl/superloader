@@ -1,0 +1,19 @@
+{
+  "name": "superloader",
+  "version": "0.1.0",
+  "description": "Universal loader for webpack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "webpack",
+    "loaders"
+  ],
+  "author": "Brandon Carl",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/brandoncarl/superloader.git"
+  }
+}
