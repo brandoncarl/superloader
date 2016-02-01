@@ -15,6 +15,10 @@ module.exports = loader = function SuperLoader(content) {
   var ext  = path.parse(this.resourcePath).ext.replace(/^\./, ""),
       next = this.async();
 
+  // Add engine if necessary
+  if (!loader.engines.hasEngine(ext))
+    this.engines.addEngine(ext);
+
   // The motors engine will compile based on file extension (we remove the leading ".")
   loader.engines.compile(ext, content, {}, next);
 
