@@ -6,7 +6,7 @@
 */
 
 var path   = require("path"),
-    motors = require("motors"),
+    Motors = require("motors"),
     loader;
 
 
