@@ -1,7 +1,8 @@
+/**
 
-/*
-
-  Superloader
+  superloader
+  Copyright 2016 Brandon Carl
+  MIT Licensed
 
 */
 
@@ -9,6 +10,14 @@ var path         = require("path"),
     Motors       = require("motors"),
     Superloader;
 
+
+/**
+
+  Universal loader for webpack.
+
+  @param {String} content Content to progress.
+
+**/
 
 Superloader = module.exports = function Superloader(content) {
 
