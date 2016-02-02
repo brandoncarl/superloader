@@ -7,24 +7,24 @@
 
 var path   = require("path"),
     Motors = require("motors"),
-    loader;
+    Superloader;
 
 
-module.exports = loader = function SuperLoader(content) {
+Superloader = module.exports = function Superloader(content) {
 
   var ext  = path.parse(this.resourcePath).ext.replace(/^\./, ""),
       next = this.async();
 
   // Add engine if necessary
-  if (!loader.engines.hasEngine(ext))
+  if (!Superloader.engines.hasEngine(ext))
     this.engines.addEngine(ext);
 
   // The motors engine will compile based on file extension (we remove the leading ".")
-  loader.engines.compile(ext, content, {}, next);
+  Superloader.engines.compile(ext, content, {}, next);
 
 }
 
 
 // Expose motors object. This allows additional/removal of motors, as well as querying
 // current configuration.
-loader.engines = new Motors();
+Superloader.engines = new Motors();
