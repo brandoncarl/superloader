@@ -5,8 +5,8 @@
 
 */
 
-var path   = require("path"),
-    Motors = require("motors"),
+var path         = require("path"),
+    Motors       = require("motors"),
     Superloader;
 
 
@@ -22,7 +22,7 @@ Superloader = module.exports = function Superloader(content) {
   // The motors engine will compile based on file extension (we remove the leading ".")
   Superloader.engines.compile(ext, content, {}, next);
 
-}
+};
 
 
 // Expose motors object. This allows additional/removal of motors, as well as querying
