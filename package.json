@@ -17,6 +17,6 @@
     "url": "git://github.com/brandoncarl/superloader.git"
   },
   "dependencies": {
-    "motors": "^0.1.3"
+    "motors": "^0.1.4"
   }
 }
