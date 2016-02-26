@@ -17,6 +17,6 @@
     "url": "git://github.com/brandoncarl/superloader.git"
   },
   "dependencies": {
-    "motors": "^0.2.2"
+    "pipemaker": "^0.3.0"
   }
 }

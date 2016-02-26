@@ -7,7 +7,7 @@
 */
 
 var path         = require("path"),
-    Motors       = require("motors"),
+    Pipemaker    = require("pipemaker"),
     Superloader;
 
 
@@ -24,16 +24,16 @@ Superloader = module.exports = function Superloader(content) {
   var ext  = path.parse(this.resourcePath).ext.replace(/^\./, ""),
       next = this.async();
 
-  // Add engine if necessary
-  if (!Superloader.engines.hasEngine(ext))
-    this.engines.addEngine(ext);
+  // Add pipeline if necessary
+  if (!Superloader.pipelines.hasPipeline(ext))
+    this.pipelines.addPipeline(ext);
 
-  // The motors engine will compile based on file extension (we remove the leading ".")
-  Superloader.engines.compile(ext, content, {}, next);
+  // The pipemaker pipeline will compile based on file extension (we remove the leading ".")
+  Superloader.pipelines.compile(ext, content, {}, next);
 
 };
 
 
-// Expose motors object. This allows additional/removal of motors, as well as querying
+// Expose pipemaker object. This allows additional/removal of pipemaker, as well as querying
 // current configuration.
-Superloader.engines = new Motors();
+Superloader.pipelines = new Pipemaker();
