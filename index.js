@@ -26,7 +26,7 @@ Superloader = module.exports = function Superloader(content) {
 
   // Add pipeline if necessary
   if (!Superloader.pipelines.hasPipeline(ext))
-    this.pipelines.addPipeline(ext);
+    Superloader.pipelines.addPipeline(ext);
 
   // The pipemaker pipeline will compile based on file extension (we remove the leading ".")
   Superloader.pipelines.compile(ext, content, {}, next);
