@@ -1,7 +1,7 @@
 # Superloader
 
 A universal loader for webpack with hot module loading. Based on
-[Motors](http://github.com/brandoncarl/motors) engine.
+[Pipemaker](http://github.com/brandoncarl/pipemaker) engine.
 
 
 ## Installation
@@ -17,9 +17,9 @@ $ npm install superloader
 var Superloader = require("superloader");
 
 // Add engines
-Superloader.engines.addEngine("typescript");
-Superloader.engines.addEngine("coffee-script");
-Superloader.engines.addEngine("jbs", "jade>handlebars");
+Supertransform.pipelines.addPipeline("ts");
+Supertransform.pipelines.addPipeline("coffee");
+Supertransform.pipelines.addPipeline("jbs", "jade>handlebars");
 
 // Example webpack loader
 {
