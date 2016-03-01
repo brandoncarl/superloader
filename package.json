@@ -1,6 +1,6 @@
 {
   "name": "superloader",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "Universal loader for webpack",
   "main": "index.js",
   "scripts": {
