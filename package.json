@@ -1,6 +1,6 @@
 {
   "name": "superloader",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "description": "Universal loader for webpack",
   "main": "index.js",
   "scripts": {
@@ -17,6 +17,6 @@
     "url": "git://github.com/brandoncarl/superloader.git"
   },
   "dependencies": {
-    "pipemaker": "0.6.0"
+    "pipemaker": "0.7.0"
   }
 }
